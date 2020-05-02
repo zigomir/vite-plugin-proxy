@@ -1,0 +1,11 @@
+{
+  "name": "vite-proxy",
+  "version": "0.1.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "ziga.dev",
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "^1.18.0"
+  }
+}
