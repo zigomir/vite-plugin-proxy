@@ -1,7 +1,7 @@
 <template>
   <Suspense>
     <template #default>
-      <Cell />
+      <User />
     </template>
     <template #fallback>loading...</template>
   </Suspense>
@@ -9,10 +9,10 @@
 
 <script>
 import { ref } from 'vue'
-import Cell from './Cell.vue'
+import User from './User.vue'
 
 export default {
-  components: { Cell },
+  components: { User },
 }
 </script>
 

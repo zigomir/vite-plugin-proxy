@@ -11,13 +11,14 @@ I prefer `import` to `require` 🤷‍♂️
 
 > also see [/example](/example) dir
 
-```bash
+```sh
 npm install vite-plugin-proxy --save-dev
 # or
 yarn add -D vite-plugin-proxy
 ```
 
 ```js
+// server.js
 import vite from 'vite'
 import proxyPlugin from 'vite-plugin-proxy'
 
@@ -37,7 +38,11 @@ vite
   .listen(3000)
 ```
 
-## to wait for
+```sh
+node server.js
+```
 
-- wait for [vite](https://github.com/vuejs/vite#todos) to get config file support
+## TODO
+
 - [x] confirm that vite will keep using `koa` and not express or something else – https://github.com/vuejs/vite/issues/34
+- wait for [vite](https://github.com/vuejs/vite#todos) to get config file support
