@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-proxy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "./main.js",
   "type": "module",
   "author": "ziga.dev",
