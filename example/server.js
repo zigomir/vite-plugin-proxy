@@ -1,5 +1,5 @@
 import vite from 'vite'
-import proxyPlugin from '../index.js'
+import proxyPlugin from '../main.js'
 
 const ONE_YEAR_IN_SECONDS = 60 * 60 * 24 * 365
 

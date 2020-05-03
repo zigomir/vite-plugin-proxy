@@ -11,9 +11,15 @@ I prefer `import` to `require` 🤷‍♂️
 
 > also see [/example](/example) dir
 
+```bash
+npm install vite-plugin-proxy --save-dev
+# or
+yarn add -D vite-plugin-proxy
+```
+
 ```js
 import vite from 'vite'
-import proxyPlugin from '../index.js'
+import proxyPlugin from 'vite-plugin-proxy'
 
 vite
   .createServer({
