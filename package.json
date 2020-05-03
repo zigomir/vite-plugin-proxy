@@ -5,6 +5,7 @@
   "type": "module",
   "author": "ziga.dev",
   "license": "MIT",
+  "homepage": "https://github.com/zigomir/vite-plugin-proxy",
   "keywords": [
     "vite",
     "vue",
