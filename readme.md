@@ -1,6 +1,7 @@
 # vite-plugin-proxy
 
 > a [vite](https://github.com/vuejs/vite) server plugin that proxies your `api` calls
+> basically a fork of https://github.com/sunyongjian/koa2-proxy-middleware
 
 ## compatibility: node v14+
 
@@ -17,21 +18,17 @@ import proxyPlugin from '../index.js'
 vite
   .createServer({
     plugins: [
-      // pass `http-proxy` options: https://github.com/http-party/node-http-proxy#options
       proxyPlugin({
-        target: 'https://reqres.in',
+        '/api/(.*)': {
+          // for option docs see https://github.com/chimurai/http-proxy-middleware#options
+          target: 'https://reqres.in',
+          changeOrigin: true,
+        },
       }),
     ],
   })
   .listen(3000)
 ```
-
-## to do
-
-- [ ] see if I can use https://github.com/chimurai/http-proxy-middleware/ instead of `http-proxy`
-- [ ] make it generic and configurable
-  Learn from https://github.com/webpack/webpack-dev-server and https://github.com/chimurai/http-proxy-middleware
-- [ ] publish as re-usable npm package
 
 ## to wait for
 

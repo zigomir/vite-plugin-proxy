@@ -1,12 +1,14 @@
 {
   "name": "vite-plugin-proxy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "type": "module",
   "author": "ziga.dev",
   "license": "MIT",
   "dependencies": {
-    "http-proxy": "^1.18.0"
+    "http-proxy-middleware": "^1.0.3",
+    "koa2-connect": "^1.0.2",
+    "path-to-regexp": "^6.1.0"
   },
   "engines": {
     "node": ">= 14"
