@@ -5,7 +5,11 @@
   "type": "module",
   "author": "ziga.dev",
   "license": "MIT",
-  "keywords": ["vite", "vue", "proxy"],
+  "keywords": [
+    "vite",
+    "vue",
+    "proxy"
+  ],
   "dependencies": {
     "http-proxy-middleware": "^1.0.3",
     "koa2-connect": "^1.0.2",
