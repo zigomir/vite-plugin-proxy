@@ -7,7 +7,7 @@ vite
   .createServer({
     plugins: [
       proxyPlugin({
-        '/api/(.*)': {
+        '/api': {
           // for option docs see https://github.com/chimurai/http-proxy-middleware#options
           target: 'https://reqres.in',
           changeOrigin: true,

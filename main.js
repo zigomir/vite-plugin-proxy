@@ -1,12 +1,20 @@
 import k2c from 'koa2-connect'
 import httpProxy from 'http-proxy-middleware'
-import ptr from 'path-to-regexp'
+import contextMatcher from 'http-proxy-middleware/dist/context-matcher.js'
 
 export default (options = {}) => ({ _root, app }) => {
+  const proxies = Object.entries(options).reduce(
+    (proxies, [context, contextOptions]) =>
+      proxies.set(context, httpProxy.createProxyMiddleware(context, contextOptions)),
+    new Map()
+  )
+
   return app.use(async (ctx, next) => {
-    for (const route of Object.keys(options)) {
-      if (ptr.pathToRegexp(route).test(ctx.path)) {
-        await k2c(httpProxy.createProxyMiddleware(options[route]))(ctx, next)
+    for (const context of proxies.keys()) {
+      // emulate `shouldProxy` from http-proxy-middleware
+      // because otherwise we might call next() more than once and break koa
+      if (contextMatcher.match(context, ctx.path, ctx.req)) {
+        await k2c(proxies.get(context))(ctx, next)
         break
       }
     }
