@@ -23,4 +23,4 @@ node server.js
 ## to wait for
 
 - wait for [vite](https://github.com/vuejs/vite#todos) to get config file support
-- confirm that vite will keep using `koa` and not express or something else
+- [x] confirm that vite will keep using `koa` and not express or something else – https://github.com/vuejs/vite/issues/34
