@@ -6,12 +6,24 @@
 
 I prefer `import` to `require` 🤷‍♂️
 
-## usage – see [/example](/example) dir
+## usage
 
-```sh
-cd example
-yarn
-node server.js
+> also see [/example](/example) dir
+
+```js
+import vite from 'vite'
+import proxyPlugin from '../index.js'
+
+vite
+  .createServer({
+    plugins: [
+      // pass `http-proxy` options: https://github.com/http-party/node-http-proxy#options
+      proxyPlugin({
+        target: 'https://reqres.in',
+      }),
+    ],
+  })
+  .listen(3000)
 ```
 
 ## to do
