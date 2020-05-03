@@ -1,11 +1,12 @@
-# vite proxy
+# vite-plugin-proxy
 
-I believe that vite is much better approach to web dev than webpack.
-But, in order to make it really useful for my use cases, I need a proxy feature.
+> a [vite](https://github.com/vuejs/vite) server plugin that proxies your `api` calls
 
-This is my first step in that direction.
+## compatibility: node v14+
 
-## usage
+I prefer `import` to `require` 🤷‍♂️
+
+## usage – see [/example](/example) dir
 
 ```sh
 cd example
