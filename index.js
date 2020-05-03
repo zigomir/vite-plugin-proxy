@@ -26,9 +26,9 @@ export default ({ _root, app }) => {
   app.use(async (ctx, next) => {
     // TODO: make this configurable
     if (ctx.path.startsWith('/api')) {
-      await new Promise((resolve, _reject) => {
-        proxy.web(ctx.req, { ...ctx.res, ctx, resolve })
-      })
+      await new Promise((resolve, reject) =>
+        proxy.web(ctx.req, { ...ctx.res, ctx, resolve }, {}, (error) => reject(error))
+      )
     } else {
       // let vite do its magic
       await next()
