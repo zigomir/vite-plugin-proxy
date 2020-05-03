@@ -13,13 +13,6 @@ import Cell from './Cell.vue'
 
 export default {
   components: { Cell },
-  setup () {
-    let count = ref(0)
-
-    return {
-      count,
-    }
-  }
 }
 </script>
 
