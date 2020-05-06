@@ -3,10 +3,6 @@
 > a [vite](https://github.com/vuejs/vite) server plugin that proxies your `api` calls
 > basically a fork of https://github.com/sunyongjian/koa2-proxy-middleware
 
-## compatibility: node v14+
-
-I prefer `import` to `require` 🤷‍♂️
-
 ## usage
 
 > also see [/example](/example) dir
@@ -19,8 +15,12 @@ yarn add -D vite-plugin-proxy
 
 ```js
 // server.js
-import vite from 'vite'
-import proxyPlugin from 'vite-plugin-proxy'
+const vite = require('vite')
+const proxyPlugin = require('vite-plugin-proxy')
+
+// or, if you're using "type": "module", like I am in example directory:
+// import vite from 'vite'
+// import proxyPlugin from 'vite-plugin-proxy'
 
 vite
   .createServer({

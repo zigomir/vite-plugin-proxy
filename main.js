@@ -1,8 +1,8 @@
-import k2c from 'koa2-connect'
-import httpProxy from 'http-proxy-middleware'
-import contextMatcher from 'http-proxy-middleware/dist/context-matcher.js'
+const k2c = require('koa2-connect')
+const httpProxy = require('http-proxy-middleware')
+const contextMatcher = require('http-proxy-middleware/dist/context-matcher.js')
 
-export default (options = {}) => ({ _root, app }) => {
+module.exports = (options = {}) => ({ _root, app }) => {
   const proxies = Object.entries(options).reduce(
     (proxies, [context, contextOptions]) =>
       proxies.set(context, httpProxy.createProxyMiddleware(context, contextOptions)),
