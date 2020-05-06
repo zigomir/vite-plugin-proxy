@@ -1,7 +1,10 @@
 # vite-plugin-proxy
 
-> a [vite](https://github.com/vuejs/vite) server plugin that proxies your `api` calls
-> basically a fork of https://github.com/sunyongjian/koa2-proxy-middleware
+> what `devServer.proxy` is for `webpack-dev-server`, `vite-plugin-proxy` is for `vite`
+
+> it's a `vite` plugin that proxies your `api` calls
+
+> shamelessly stolen from https://github.com/sunyongjian/koa2-proxy-middleware
 
 ## usage
 
