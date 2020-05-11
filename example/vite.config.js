@@ -1,22 +1,4 @@
-# vite-plugin-proxy
-
-> what `devServer.proxy` is for `webpack-dev-server`, `vite-plugin-proxy` is for `vite`
-
-> it's a `vite` plugin that proxies your requests
-
-## usage
-
-> also see [/example](/example) dir
-
-```sh
-npm install vite-plugin-proxy --save-dev
-# or
-yarn add -D vite-plugin-proxy
-```
-
-```js
-// vite.config.js # or vite.config.ts
-const proxyPlugin = require('vite-plugin-proxy')
+const proxyPlugin = require('../main.js')
 
 module.exports = {
   plugins: [
@@ -36,8 +18,3 @@ module.exports = {
     }),
   ],
 }
-```
-
-## credit
-
-mostly shamelessly stolen from https://github.com/sunyongjian/koa2-proxy-middleware
