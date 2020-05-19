@@ -17,4 +17,11 @@ module.exports = {
       },
     }),
   ],
+  // or use vite's proxy directly: https://github.com/vuejs/vite#dev-server-proxy
+  // proxy: {
+  //   '/api': {
+  //     target: 'https://reqres.in',
+  //     changeOrigin: true,
+  //   },
+  // },
 }

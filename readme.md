@@ -1,5 +1,7 @@
 # vite-plugin-proxy
 
+# ⚠️ [vite now has own proxy](https://github.com/vuejs/vite#dev-server-proxy) – so don't use this plugin
+
 > what `devServer.proxy` is for `webpack-dev-server`, `vite-plugin-proxy` is for `vite`
 
 > it's a `vite` plugin that proxies your requests
